@@ -5,6 +5,7 @@ this code will only run on a secure https server
 from django.http import *
 import json
 from django.views.decorators.csrf import csrf_exempt, csrf_protect
+from mysite.settings import VERIFY_TOKEN
 
 
 # example endpoint and token to verify by face book
@@ -13,7 +14,7 @@ EndPoint= 'https://tracc-busines.herokuapp.com/ca9e9764-9e0d-4318-9d6d-9b6180d19
 
 @csrf_exempt
 def WebHookSetUp(request):
-    verify_token ="cd4ff259-f8e8-4d9e-8d69-410d1e2aed56"
+    verify_token = VERIFY_TOKEN
     if request.method == "GET":
         mode = request.GET.get('hob.mode',None)
         token = request.GET.get('hub.verify_token',None)
