@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pa5ep+6xs4bo!s+m8d47=)jcp(&+t^a_=-4fo8hqzl=**%6+j%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['c99a-102-89-32-155.eu.ngrok.io']
 
 
 # Application definition
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webhook.apps.WebhookConfig'
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
